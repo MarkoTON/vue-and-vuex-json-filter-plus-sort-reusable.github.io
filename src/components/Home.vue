@@ -1,8 +1,17 @@
 <template>
-  <div class="container mt-4">
-    <Pagination />
-    <FilterTable />
-    <TableUsers />
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-6">
+        <Pagination />
+        <FilterTable />
+        <TableUsers />
+      </div><!-- col-6 -->
+      <div class="col-6">
+        <PaginationReusable />
+        <FilterTableReusable />
+        <TableUsersReusable />
+      </div><!-- col-6 -->
+    </div><!-- row -->
   </div>
 </template>
 
@@ -10,6 +19,10 @@
 import FilterTable from './FilterTable.vue'
 import TableUsers from './TableUsers';
 import Pagination from './Pagination';
+
+import FilterTableReusable from './reusable/FilterTable.vue'
+import TableUsersReusable from './reusable/TableUsers';
+import PaginationReusable from './reusable/Pagination';
 
 export default {
   name: 'HelloWorld',
@@ -20,7 +33,10 @@ export default {
   components: {
     TableUsers,
     FilterTable,
-    Pagination
+    Pagination,
+    FilterTableReusable,
+    TableUsersReusable,
+    PaginationReusable
   },
   computed:{
   },
